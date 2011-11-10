@@ -33,7 +33,7 @@ template "/etc/newrelic/nrsysmond.cfg" do
   source "nrsysmond.cfg.erb"
   owner "root"
   group "newrelic"
-  mode "644"
+  mode "640"
   variables( :license_key => node[:newrelic][:license_key],
              :hostname => node[:fqdn] )
   notifies( :restart, "service[newrelic-sysmond]" ) if node[:newrelic][:enabled]
