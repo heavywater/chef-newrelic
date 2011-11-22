@@ -8,7 +8,7 @@ Requirements
 
 A New Relic license key.
 
-Supports Ubuntu, Debian, CentOS and RedHat.
+Supports Ubuntu, Debian, CentOS, RedHat, and Fedora.
 
 See additional [compatibility and requirements](http://newrelic.com/docs/server/new-relic-for-server-monitoring#requirements).
 

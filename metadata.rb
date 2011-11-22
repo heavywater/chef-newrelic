@@ -9,5 +9,6 @@ supports "ubuntu"
 supports "debian"
 supports "centos"
 supports "redhat"
+supports "fedora"
 
 depends "apt"
