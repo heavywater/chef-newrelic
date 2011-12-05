@@ -14,4 +14,6 @@ execute "add newrelic repository" do
   notifies :run, "execute[yum -q makecache]", :immediately
 end
 
-package "newrelic-sysmond"
+package "newrelic-sysmond" do
+  action :upgrade
+end

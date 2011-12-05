@@ -22,4 +22,5 @@ end
 
 package "newrelic-sysmond" do
   options "--allow-unauthenticated"
+  action :upgrade
 end
