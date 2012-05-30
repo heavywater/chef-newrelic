@@ -10,7 +10,7 @@ module Opscode
       def initialize
       end
 
-      def notify(key, app)
+      def notify(key, app, failure_ok)
 
         @options = {
           :headers => { 'x-license-key' => key },
@@ -19,7 +19,7 @@ module Opscode
         response = self.class.post('/deployments.xml', @options)
 
         if response.has_key?('errors')
-          if @new_resource.failure_ok
+          if failure_ok
             Chef::Log.error("New Relic deploy notification error: #{response['errors']['error']}")
           else
             Chef::Log.error("New Relic deploy notification error: #{response['errors']['error']}")
