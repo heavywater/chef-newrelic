@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-httparty = gem_package 'httparty' do
+httparty = chef_gem 'httparty' do
   action :nothing
 end
 
