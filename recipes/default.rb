@@ -17,6 +17,12 @@
 # limitations under the License.
 #
 
+httparty = chef_gem 'httparty' do
+  action :nothing
+end
+
+httparty.run_action(:install)
+
 case node[:platform]
 when "ubuntu", "debian"
   include_recipe "newrelic::debian"
